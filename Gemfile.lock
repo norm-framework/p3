@@ -1,0 +1,12 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    minitest (3.0.1)
+    rexical (1.0.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  rexical

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Compile the lexer and run tests against it
+
+ragel -R ragel/lexer.rl -o lib/specspeak/lexer.rb
+ruby -Itest test/lexer_tests.rb
