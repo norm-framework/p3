@@ -28,7 +28,7 @@ module SpecSpeak
     end
 
     def emit(token_name, data, target_array, ts, te)
-      target_array << {:name => token_name.to_sym, :value => data[ts...te].pack("c*") }
+      target_array << [token_name.to_sym, data[ts...te].pack("c*")]
     end
 
     def scan(data)
