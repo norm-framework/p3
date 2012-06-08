@@ -1,12 +1,19 @@
+GIT
+  remote: git://github.com/nohupbrasil/minitest-colorize.git
+  revision: e9bfd39673ee9ab8f341f410c22850b97b12353a
+  branch: master
+  specs:
+    minitest-colorize (0.0.4)
+      minitest (>= 2.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
     minitest (3.0.1)
-    rexical (1.0.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest
-  rexical
+  minitest-colorize!
