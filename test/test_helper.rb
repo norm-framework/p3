@@ -1,2 +1,3 @@
-$:.unshift File.expand_path("../../lib", __FILE__)
-require "test/unit"
+require "bundler/setup"
+require "minitest/autorun"
+require "minitest/colorize"
