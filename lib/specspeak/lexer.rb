@@ -29,7 +29,8 @@ end
 self._lexer_key_offsets = [
 	0, 0, 1, 2, 3, 4, 5, 6, 
 	7, 8, 9, 10, 11, 12, 13, 14, 
-	15, 16, 17
+	15, 16, 17, 18, 19, 20, 21, 22, 
+	23, 24, 25, 26
 ]
 
 class << self
@@ -37,9 +38,11 @@ class << self
 	private :_lexer_trans_keys, :_lexer_trans_keys=
 end
 self._lexer_trans_keys = [
-	101, 97, 116, 117, 114, 101, 58, 101, 
-	113, 117, 105, 114, 101, 109, 101, 110, 
-	116, 32, 70, 82, 9, 13, 0
+	120, 97, 109, 112, 108, 101, 115, 58, 
+	101, 97, 116, 117, 114, 101, 111, 116, 
+	101, 113, 117, 105, 114, 101, 109, 101, 
+	110, 116, 32, 69, 70, 78, 82, 9, 
+	13, 0
 ]
 
 class << self
@@ -49,7 +52,8 @@ end
 self._lexer_single_lengths = [
 	0, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 3
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 5
 ]
 
 class << self
@@ -59,7 +63,8 @@ end
 self._lexer_range_lengths = [
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 1
+	0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 1
 ]
 
 class << self
@@ -69,7 +74,23 @@ end
 self._lexer_index_offsets = [
 	0, 0, 2, 4, 6, 8, 10, 12, 
 	14, 16, 18, 20, 22, 24, 26, 28, 
-	30, 32, 34
+	30, 32, 34, 36, 38, 40, 42, 44, 
+	46, 48, 50, 52
+]
+
+class << self
+	attr_accessor :_lexer_indicies
+	private :_lexer_indicies, :_lexer_indicies=
+end
+self._lexer_indicies = [
+	0, 1, 2, 1, 3, 1, 4, 1, 
+	5, 1, 6, 1, 7, 1, 8, 1, 
+	9, 1, 10, 1, 11, 1, 12, 1, 
+	13, 1, 7, 1, 14, 1, 5, 1, 
+	15, 1, 16, 1, 17, 1, 18, 1, 
+	19, 1, 20, 1, 21, 1, 22, 1, 
+	23, 1, 7, 1, 24, 25, 26, 27, 
+	28, 24, 1, 0
 ]
 
 class << self
@@ -77,11 +98,10 @@ class << self
 	private :_lexer_trans_targs, :_lexer_trans_targs=
 end
 self._lexer_trans_targs = [
-	2, 0, 3, 0, 4, 0, 5, 0, 
-	6, 0, 7, 0, 18, 0, 9, 0, 
-	10, 0, 11, 0, 12, 0, 13, 0, 
-	14, 0, 15, 0, 16, 0, 17, 0, 
-	7, 0, 18, 1, 8, 18, 0, 0
+	2, 0, 3, 4, 5, 6, 7, 8, 
+	27, 10, 11, 12, 13, 14, 16, 18, 
+	19, 20, 21, 22, 23, 24, 25, 26, 
+	27, 1, 9, 15, 17
 ]
 
 class << self
@@ -90,10 +110,9 @@ class << self
 end
 self._lexer_trans_actions = [
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 5, 0, 0, 0, 
+	5, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 7, 0, 0, 7, 0, 0
+	7, 0, 0, 0, 0
 ]
 
 class << self
@@ -103,7 +122,8 @@ end
 self._lexer_to_state_actions = [
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 1
+	0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 1
 ]
 
 class << self
@@ -113,17 +133,18 @@ end
 self._lexer_from_state_actions = [
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 3
+	0, 0, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 3
 ]
 
 class << self
 	attr_accessor :lexer_start
 end
-self.lexer_start = 18;
+self.lexer_start = 27;
 class << self
 	attr_accessor :lexer_first_final
 end
-self.lexer_first_final = 18;
+self.lexer_first_final = 27;
 class << self
 	attr_accessor :lexer_error
 end
@@ -132,7 +153,7 @@ self.lexer_error = 0;
 class << self
 	attr_accessor :lexer_en_main
 end
-self.lexer_en_main = 18;
+self.lexer_en_main = 27;
 
 
 # line 27 "ragel/lexer.rl"
@@ -149,7 +170,7 @@ self.lexer_en_main = 18;
       token_array = []
 
       
-# line 153 "lib/specspeak/lexer.rb"
+# line 174 "lib/specspeak/lexer.rb"
 begin
 	p ||= 0
 	pe ||= data.length
@@ -161,7 +182,7 @@ end
 
 # line 40 "ragel/lexer.rl"
       
-# line 165 "lib/specspeak/lexer.rb"
+# line 186 "lib/specspeak/lexer.rb"
 begin
 	_klen, _trans, _keys, _acts, _nacts = nil
 	_goto_level = 0
@@ -195,7 +216,7 @@ begin
 		begin
 ts = p
 		end
-# line 199 "lib/specspeak/lexer.rb"
+# line 220 "lib/specspeak/lexer.rb"
 		end # from state action switch
 	end
 	if _trigger_goto
@@ -250,6 +271,7 @@ ts = p
 	     _trans += _klen
 	  end
 	end while false
+	_trans = _lexer_indicies[_trans]
 	cs = _lexer_trans_targs[_trans]
 	if _lexer_trans_actions[_trans] != 0
 		_acts = _lexer_trans_actions[_trans]
@@ -272,7 +294,7 @@ when 3 then
 		begin
 te = p+1
 		end
-# line 276 "lib/specspeak/lexer.rb"
+# line 298 "lib/specspeak/lexer.rb"
 			end # action switch
 		end
 	end
@@ -292,7 +314,7 @@ when 0 then
 # line 1 "NONE"
 		begin
 ts = nil;		end
-# line 296 "lib/specspeak/lexer.rb"
+# line 318 "lib/specspeak/lexer.rb"
 		end # to state action switch
 	end
 	if _trigger_goto

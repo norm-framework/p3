@@ -3,7 +3,7 @@
 
   machine lexer;
 
-  keyword  = "Requirement:" | "Feature:";
+  keyword  = "Feature:" | "Requirement:" | "Examples:" | "Notes:";
 
   main := |*
 

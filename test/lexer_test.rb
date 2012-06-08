@@ -5,17 +5,16 @@ module SpecSpeak
 
   describe Lexer do
 
-    it "must recognize the 'Feature:' keyword" do
-      data   = "Feature:"
-      tokens = [[:keyword, "Feature"]]
-      assert_output(data, tokens)
+    keywords = %w{ Feature Requirement Examples Notes }
+
+    keywords.each do |keyword|
+      it "must recognize the #{ keyword } keyword" do
+        data   = "#{ keyword }:"
+        tokens = [[:keyword, keyword]]
+        assert_output(data, tokens)
+      end
     end
 
-    it "must recognize the 'Requirement:' keyword" do
-      data   = "Requirement:"
-      tokens = [[:keyword, "Requirement"]]
-      assert_output(data, tokens)
-    end
 
     def assert_output(data, tokens)
       Lexer.new.scan(data).must_equal tokens
