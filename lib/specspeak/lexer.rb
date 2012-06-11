@@ -2,7 +2,7 @@
 # line 1 "ragel/lexer.rl"
 =begin
 
-# line 18 "ragel/lexer.rl"
+# line 19 "ragel/lexer.rl"
 
 =end
 
@@ -18,8 +18,9 @@ class << self
 	private :_lexer_actions, :_lexer_actions=
 end
 self._lexer_actions = [
-	0, 1, 0, 1, 1, 1, 2, 1, 
-	3
+	0, 1, 2, 1, 5, 1, 6, 1, 
+	7, 1, 8, 1, 9, 2, 0, 1, 
+	2, 3, 4
 ]
 
 class << self
@@ -27,10 +28,11 @@ class << self
 	private :_lexer_key_offsets, :_lexer_key_offsets=
 end
 self._lexer_key_offsets = [
-	0, 0, 1, 2, 3, 4, 5, 6, 
-	7, 8, 9, 10, 11, 12, 13, 14, 
-	15, 16, 17, 18, 19, 20, 21, 22, 
-	23, 24, 25, 26
+	0, 0, 3, 19, 23, 28, 33, 38, 
+	43, 48, 53, 58, 61, 66, 71, 76, 
+	81, 86, 91, 96, 101, 106, 111, 116, 
+	121, 126, 131, 136, 141, 146, 151, 156, 
+	161, 166, 171
 ]
 
 class << self
@@ -38,11 +40,28 @@ class << self
 	private :_lexer_trans_keys, :_lexer_trans_keys=
 end
 self._lexer_trans_keys = [
-	120, 97, 109, 112, 108, 101, 115, 58, 
-	101, 97, 116, 117, 114, 101, 111, 116, 
-	101, 113, 117, 105, 114, 101, 109, 101, 
-	110, 116, 32, 69, 70, 78, 82, 9, 
-	13, 0
+	124, 32, 126, 32, 60, 62, 69, 70, 
+	77, 78, 82, 95, 124, 9, 13, 65, 
+	90, 97, 122, 32, 57, 59, 126, 120, 
+	32, 57, 59, 126, 97, 32, 57, 59, 
+	126, 109, 32, 57, 59, 126, 112, 32, 
+	57, 59, 126, 108, 32, 57, 59, 126, 
+	101, 32, 57, 59, 126, 115, 32, 57, 
+	59, 126, 58, 32, 126, 101, 32, 57, 
+	59, 126, 97, 32, 57, 59, 126, 116, 
+	32, 57, 59, 126, 117, 32, 57, 59, 
+	126, 114, 32, 57, 59, 126, 101, 32, 
+	57, 59, 126, 111, 32, 57, 59, 126, 
+	100, 32, 57, 59, 126, 117, 32, 57, 
+	59, 126, 108, 32, 57, 59, 126, 111, 
+	32, 57, 59, 126, 116, 32, 57, 59, 
+	126, 101, 32, 57, 59, 126, 113, 32, 
+	57, 59, 126, 117, 32, 57, 59, 126, 
+	105, 32, 57, 59, 126, 114, 32, 57, 
+	59, 126, 101, 32, 57, 59, 126, 109, 
+	32, 57, 59, 126, 101, 32, 57, 59, 
+	126, 110, 32, 57, 59, 126, 116, 32, 
+	57, 59, 126, 124, 32, 126, 0
 ]
 
 class << self
@@ -50,10 +69,11 @@ class << self
 	private :_lexer_single_lengths, :_lexer_single_lengths=
 end
 self._lexer_single_lengths = [
-	0, 1, 1, 1, 1, 1, 1, 1, 
+	0, 1, 10, 0, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 5
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1
 ]
 
 class << self
@@ -61,10 +81,11 @@ class << self
 	private :_lexer_range_lengths, :_lexer_range_lengths=
 end
 self._lexer_range_lengths = [
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 1
+	0, 1, 3, 2, 2, 2, 2, 2, 
+	2, 2, 2, 1, 2, 2, 2, 2, 
+	2, 2, 2, 2, 2, 2, 2, 2, 
+	2, 2, 2, 2, 2, 2, 2, 2, 
+	2, 2, 1
 ]
 
 class << self
@@ -72,10 +93,11 @@ class << self
 	private :_lexer_index_offsets, :_lexer_index_offsets=
 end
 self._lexer_index_offsets = [
-	0, 0, 2, 4, 6, 8, 10, 12, 
-	14, 16, 18, 20, 22, 24, 26, 28, 
-	30, 32, 34, 36, 38, 40, 42, 44, 
-	46, 48, 50, 52
+	0, 0, 3, 17, 20, 24, 28, 32, 
+	36, 40, 44, 48, 51, 55, 59, 63, 
+	67, 71, 75, 79, 83, 87, 91, 95, 
+	99, 103, 107, 111, 115, 119, 123, 127, 
+	131, 135, 139
 ]
 
 class << self
@@ -83,14 +105,24 @@ class << self
 	private :_lexer_indicies, :_lexer_indicies=
 end
 self._lexer_indicies = [
-	0, 1, 2, 1, 3, 1, 4, 1, 
-	5, 1, 6, 1, 7, 1, 8, 1, 
-	9, 1, 10, 1, 11, 1, 12, 1, 
-	13, 1, 7, 1, 14, 1, 5, 1, 
-	15, 1, 16, 1, 17, 1, 18, 1, 
-	19, 1, 20, 1, 21, 1, 22, 1, 
-	23, 1, 7, 1, 24, 25, 26, 27, 
-	28, 24, 1, 0
+	2, 1, 0, 3, 5, 5, 6, 7, 
+	8, 9, 10, 5, 1, 3, 5, 5, 
+	4, 5, 5, 11, 12, 5, 5, 11, 
+	13, 5, 5, 11, 14, 5, 5, 11, 
+	15, 5, 5, 11, 16, 5, 5, 11, 
+	17, 5, 5, 11, 18, 5, 5, 11, 
+	19, 5, 11, 20, 5, 5, 11, 21, 
+	5, 5, 11, 22, 5, 5, 11, 23, 
+	5, 5, 11, 24, 5, 5, 11, 18, 
+	5, 5, 11, 25, 5, 5, 11, 26, 
+	5, 5, 11, 27, 5, 5, 11, 24, 
+	5, 5, 11, 28, 5, 5, 11, 16, 
+	5, 5, 11, 29, 5, 5, 11, 30, 
+	5, 5, 11, 31, 5, 5, 11, 32, 
+	5, 5, 11, 33, 5, 5, 11, 34, 
+	5, 5, 11, 35, 5, 5, 11, 36, 
+	5, 5, 11, 37, 5, 5, 11, 18, 
+	5, 5, 11, 2, 1, 38, 0
 ]
 
 class << self
@@ -98,10 +130,11 @@ class << self
 	private :_lexer_trans_targs, :_lexer_trans_targs=
 end
 self._lexer_trans_targs = [
-	2, 0, 3, 4, 5, 6, 7, 8, 
-	27, 10, 11, 12, 13, 14, 16, 18, 
-	19, 20, 21, 22, 23, 24, 25, 26, 
-	27, 1, 9, 15, 17
+	2, 1, 34, 2, 0, 3, 4, 12, 
+	18, 22, 24, 2, 5, 6, 7, 8, 
+	9, 10, 11, 2, 13, 14, 15, 16, 
+	17, 19, 20, 21, 23, 25, 26, 27, 
+	28, 29, 30, 31, 32, 33, 2
 ]
 
 class << self
@@ -109,10 +142,11 @@ class << self
 	private :_lexer_trans_actions, :_lexer_trans_actions=
 end
 self._lexer_trans_actions = [
+	11, 0, 16, 5, 0, 0, 0, 0, 
+	0, 0, 0, 7, 0, 0, 0, 0, 
+	0, 0, 0, 3, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	5, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	7, 0, 0, 0, 0
+	0, 0, 0, 0, 0, 0, 9
 ]
 
 class << self
@@ -120,10 +154,11 @@ class << self
 	private :_lexer_to_state_actions, :_lexer_to_state_actions=
 end
 self._lexer_to_state_actions = [
+	0, 0, 13, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 1
+	0, 0, 0
 ]
 
 class << self
@@ -131,20 +166,33 @@ class << self
 	private :_lexer_from_state_actions, :_lexer_from_state_actions=
 end
 self._lexer_from_state_actions = [
+	0, 0, 1, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
 	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 3
+	0, 0, 0
+]
+
+class << self
+	attr_accessor :_lexer_eof_trans
+	private :_lexer_eof_trans, :_lexer_eof_trans=
+end
+self._lexer_eof_trans = [
+	0, 1, 0, 12, 12, 12, 12, 12, 
+	12, 12, 12, 12, 12, 12, 12, 12, 
+	12, 12, 12, 12, 12, 12, 12, 12, 
+	12, 12, 12, 12, 12, 12, 12, 12, 
+	12, 12, 39
 ]
 
 class << self
 	attr_accessor :lexer_start
 end
-self.lexer_start = 27;
+self.lexer_start = 2;
 class << self
 	attr_accessor :lexer_first_final
 end
-self.lexer_first_final = 27;
+self.lexer_first_final = 2;
 class << self
 	attr_accessor :lexer_error
 end
@@ -153,15 +201,23 @@ self.lexer_error = 0;
 class << self
 	attr_accessor :lexer_en_main
 end
-self.lexer_en_main = 27;
+self.lexer_en_main = 2;
 
 
-# line 27 "ragel/lexer.rl"
+# line 28 "ragel/lexer.rl"
       # %% this just fixes syntax highlighting in TextMate et al.
     end
 
     def emit(token_name, data, target_array, ts, te)
       target_array << [token_name.to_sym, data[ts...te].pack("c*")]
+    end
+
+    def emit_row(data, target_array, ts, te)
+      target_array << [:row, 'row']
+      cells = data[(ts + 1)...( te - 1)].pack("c*")
+      cells.split('|').each do |cell|
+        target_array << [:cell, cell.strip]
+      end
     end
 
     def scan(data)
@@ -170,7 +226,7 @@ self.lexer_en_main = 27;
       token_array = []
 
       
-# line 174 "lib/specspeak/lexer.rb"
+# line 230 "lib/specspeak/lexer.rb"
 begin
 	p ||= 0
 	pe ||= data.length
@@ -180,9 +236,9 @@ begin
 	act = 0
 end
 
-# line 40 "ragel/lexer.rl"
+# line 49 "ragel/lexer.rl"
       
-# line 186 "lib/specspeak/lexer.rb"
+# line 242 "lib/specspeak/lexer.rb"
 begin
 	_klen, _trans, _keys, _acts, _nacts = nil
 	_goto_level = 0
@@ -211,12 +267,12 @@ begin
 		_nacts -= 1
 		_acts += 1
 		case _lexer_actions[_acts - 1]
-			when 1 then
+			when 2 then
 # line 1 "NONE"
 		begin
 ts = p
 		end
-# line 220 "lib/specspeak/lexer.rb"
+# line 276 "lib/specspeak/lexer.rb"
 		end # from state action switch
 	end
 	if _trigger_goto
@@ -272,6 +328,8 @@ ts = p
 	  end
 	end while false
 	_trans = _lexer_indicies[_trans]
+	end
+	if _goto_level <= _eof_trans
 	cs = _lexer_trans_targs[_trans]
 	if _lexer_trans_actions[_trans] != 0
 		_acts = _lexer_trans_actions[_trans]
@@ -281,20 +339,56 @@ ts = p
 			_nacts -= 1
 			_acts += 1
 			case _lexer_actions[_acts - 1]
-when 2 then
-# line 10 "ragel/lexer.rl"
+when 3 then
+# line 1 "NONE"
 		begin
 te = p+1
- begin 
-      emit(:keyword, data, token_array, ts, te-1)
-     end
 		end
-when 3 then
+when 4 then
 # line 14 "ragel/lexer.rl"
 		begin
+act = 3;		end
+when 5 then
+# line 12 "ragel/lexer.rl"
+		begin
+te = p+1
+ begin  emit(:keyword, data, token_array, ts, te-1)  end
+		end
+when 6 then
+# line 16 "ragel/lexer.rl"
+		begin
 te = p+1
 		end
-# line 298 "lib/specspeak/lexer.rb"
+when 7 then
+# line 13 "ragel/lexer.rl"
+		begin
+te = p
+p = p - 1; begin  emit(:string, data, token_array, ts, te)   end
+		end
+when 8 then
+# line 14 "ragel/lexer.rl"
+		begin
+te = p
+p = p - 1; begin  emit_row(data, token_array, ts, te)  end
+		end
+when 9 then
+# line 1 "NONE"
+		begin
+	case act
+	when 0 then
+	begin	begin
+		cs = 0
+		_trigger_goto = true
+		_goto_level = _again
+		break
+	end
+end
+	when 3 then
+	begin begin p = ((te))-1; end
+ emit_row(data, token_array, ts, te) end
+end 
+			end
+# line 392 "lib/specspeak/lexer.rb"
 			end # action switch
 		end
 	end
@@ -314,7 +408,12 @@ when 0 then
 # line 1 "NONE"
 		begin
 ts = nil;		end
-# line 318 "lib/specspeak/lexer.rb"
+when 1 then
+# line 1 "NONE"
+		begin
+act = 0
+		end
+# line 417 "lib/specspeak/lexer.rb"
 		end # to state action switch
 	end
 	if _trigger_goto
@@ -331,6 +430,13 @@ ts = nil;		end
 	end
 	end
 	if _goto_level <= _test_eof
+	if p == eof
+	if _lexer_eof_trans[cs] > 0
+		_trans = _lexer_eof_trans[cs] - 1;
+		_goto_level = _eof_trans
+		next;
+	end
+end
 	end
 	if _goto_level <= _out
 		break
@@ -338,7 +444,7 @@ ts = nil;		end
 	end
 	end
 
-# line 41 "ragel/lexer.rl"
+# line 50 "ragel/lexer.rl"
 
       token_array
     end
