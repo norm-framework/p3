@@ -6,4 +6,5 @@ group :development do
   gem "guard"
   gem "guard-rake"
   gem "guard-minitest"
+  gem "racc"
 end
