@@ -5,12 +5,12 @@ module SpecSpeak
 
   describe Lexer do
 
-    keywords = %w{ Module Feature Requirement Examples Notes }
+    keywords = %w{ Module Requirement Examples Notes }
 
     keywords.each do |keyword|
       it "must recognize the #{ keyword } keyword" do
         data   = "#{ keyword }:"
-        tokens = [ [:keyword, keyword] ]
+        tokens = [ [keyword.upcase.to_sym, keyword] ]
         assert_output data, tokens
       end
     end
@@ -22,9 +22,9 @@ module SpecSpeak
                 | Project B | Second Project    |
               EOF
       tokens = [
-                 [:row, 'row'], [:cell, 'Name'],      [:cell, 'Description'],
-                 [:row, 'row'], [:cell, 'Project A'], [:cell, 'First Project'],
-                 [:row, 'row'], [:cell, 'Project B'], [:cell, 'Second Project']
+                 [:ROW, 'Row'], [:CELL, 'Name'],      [:CELL, 'Description'],
+                 [:ROW, 'Row'], [:CELL, 'Project A'], [:CELL, 'First Project'],
+                 [:ROW, 'Row'], [:CELL, 'Project B'], [:CELL, 'Second Project']
                ]
       assert_output data, tokens
     end
@@ -32,17 +32,16 @@ module SpecSpeak
 
     it "must tokenize strings" do
       data   = "Module: Create a Project"
-      tokens = [ [:keyword, "Module"], [:string, 'Create a Project'] ]
+      tokens = [ [:MODULE, "Module"], [:STRING, 'Create a Project'] ]
       assert_output data, tokens
     end
-
 
     it "must tokenize sentences with placeholders" do
       data   = <<-EOF
                Given <Role>
                <Something>
                EOF
-      tokens = [ [:string, 'Given <Role>'], [:string, '<Something>'] ]
+      tokens = [ [:STRING, 'Given <Role>'], [:STRING, '<Something>'] ]
       assert_output data, tokens
     end
 
@@ -65,25 +64,25 @@ module SpecSpeak
                  dog. The quick brown fox jumps.
              EOF
       tokens = [
-                 [:keyword, 'Module'], [:string, 'Create a Project'],
-                 [:keyword, 'Requirement'],
-                    [:string, 'Given a user has a role of <Role> in the system'],
-                    [:string, 'Then he <Can or Cannot Create> projects'],
+                 [:MODULE, 'Module'], [:STRING, 'Create a Project'],
+                 [:REQUIREMENT, 'Requirement'],
+                    [:STRING, 'Given a user has a role of <Role> in the system'],
+                    [:STRING, 'Then he <Can or Cannot Create> projects'],
 
-                    [:keyword, 'Examples'],
-                      [:row, 'row'], [:cell, 'Role'], [:cell, 'Can or Cannot Create'],
-                      [:row, 'row'], [:cell, 'Admin'], [:cell, 'Can Create'],
-                      [:row, 'row'], [:cell, 'User'], [:cell, 'Cannot Create'],
+                    [:EXAMPLES, 'Examples'],
+                      [:ROW, 'Row'], [:CELL, 'Role'], [:CELL, 'Can or Cannot Create'],
+                      [:ROW, 'Row'], [:CELL, 'Admin'], [:CELL, 'Can Create'],
+                      [:ROW, 'Row'], [:CELL, 'User'], [:CELL, 'Cannot Create'],
 
-                    [:keyword, 'Notes'],
-                      [:string, 'The quick brown fox jumps over the lazy'],
-                      [:string, 'dog. The quick brown fox jumps.']
+                    [:NOTES, 'Notes'],
+                      [:STRING, 'The quick brown fox jumps over the lazy'],
+                      [:STRING, 'dog. The quick brown fox jumps.']
                ]
       assert_output data, tokens
     end
 
     def assert_output(data, tokens)
-      Lexer.new.scan(data).must_equal tokens
+      Lexer.new.tokenize(data).must_equal tokens
     end
 
   end # describe Lexer
