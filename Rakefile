@@ -10,5 +10,5 @@ end
 
 desc "Compiles the lexer"
 task :lexer do |t|
-  sh "ragel -R ragel/lexer.rl -o lib/specspeak/lexer.rb"
+  `ragel -R ragel/lexer.rl -o lib/specspeak/lexer.rb`
 end
